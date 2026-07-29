@@ -1,46 +1,46 @@
-# RouterAI Plugin for Hermes Agent
+# Плагин RouterAI для Hermes Agent
 
-[RouterAI](https://routerai.ru/) — russian OpenAI-compatible API aggregator providing access to GPT, Claude, Gemini, Grok, DeepSeek and hundreds of other models via a single API. Pay in rubles, no VPN required.
+[RouterAI](https://routerai.ru/) — российский OpenAI-совместимый API-агрегатор, предоставляющий доступ к GPT, Claude, Gemini, Grok, DeepSeek и сотням других моделей через единый API. Оплата в рублях, без VPN.
 
-## Installation
+## Установка
 
-Copy the routerai/ directory to your Hermes plugins folder:
+Скопируйте директорию `routerai/` в папку плагинов Hermes:
 
     cp -r routerai ~/.hermes/plugins/model-providers/
 
-## Configuration
+## Настройка
 
-Set your RouterAI API key as an environment variable:
+Установите API-ключ RouterAI как переменную окружения:
 
-    export ROUTERAI_API_KEY="your-api-key"
+    export ROUTERAI_API_KEY="ваш-api-ключ"
 
-Or add it to your shell profile (~/.bashrc / ~/.zshrc) for persistence.
+Или добавьте в профиль оболочки (~/.bashrc / ~/.zshrc) для сохранения между сессиями.
 
-## Usage
+## Использование
 
-Start Hermes and select RouterAI as your provider:
+Запустите Hermes и выберите RouterAI в качестве провайдера:
 
     hermes model
 
-Choose routerai from the list, then pick a model. You can also switch models at any time with:
+Выберите `routerai` из списка, затем выберите модель. Переключать модели в любой момент:
 
     /model routerai:claude-sonnet-5
 
-## Available Models
+## Доступные модели
 
-RouterAI provides access to 300+ models. Some popular ones:
+RouterAI предоставляет доступ к 300+ моделям. Популярные:
 
-- Claude Sonnet 5 — 204 / 1023 RUB per 1M tokens
-- GPT-5.6 Sol — 511 / 3069 RUB per 1M tokens
-- Gemini 3.1 Pro Preview — 204 / 1227 RUB per 1M tokens
-- DeepSeek V4 Pro — 62 / 124 RUB per 1M tokens
+- Claude Sonnet 5 — 204 / 1023 ₽ за 1М токенов
+- GPT-5.6 Sol — 511 / 3069 ₽ за 1М токенов
+- Gemini 3.1 Pro Preview — 204 / 1227 ₽ за 1М токенов
+- DeepSeek V4 Pro — 62 / 124 ₽ за 1М токенов
 
-Full list: routerai.ru/models
+Полный список: routerai.ru/models
 
-## How It Works
+## Как это работает
 
-The plugin registers a ProviderProfile in Hermes Agent provider registry. Since RouterAI is fully OpenAI Chat Completions compatible, no custom hooks or overrides are needed — the base profile handles everything.
+Плагин регистрирует `ProviderProfile` в реестре провайдеров Hermes Agent. Поскольку API RouterAI полностью совместим с форматом OpenAI Chat Completions, дополнительные хуки или переопределения не требуются — базовый профиль обрабатывает всё автоматически.
 
-## License
+## Лицензия
 
 MIT
