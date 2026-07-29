@@ -3,3 +3,9 @@ kind: model-provider
 version: 1.0.0
 description: RouterAI -- russian OpenAI-compatible API aggregator
 author: Artem Orlov
+requires_env:
+  - name: ROUTERAI_API_KEY
+    description: "API-ключ RouterAI (https://routerai.ru)"
+    prompt: "RouterAI API key"
+    url: "https://routerai.ru/"
+    password: true
