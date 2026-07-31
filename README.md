@@ -6,23 +6,11 @@
 
 ## Установка
 
-### Вариант 1: git clone (рекомендуется)
+    hermes plugins install temga/hermes-routerai-plugin --enable
 
-Установка напрямую в папку плагинов Hermes:
+Или через [hermes-ru-ecosystem](https://github.com/temga/hermes-ru-ecosystem):
 
-    git clone https://github.com/temga/hermes-routerai-plugin.git ~/.hermes/plugins/model-providers/routerai
-
-Обновление:
-
-    cd ~/.hermes/plugins/model-providers/routerai && git pull
-
-### Вариант 2: pip
-
-    pip install git+https://github.com/temga/hermes-routerai-plugin.git
-
-После установки через pip нужно создать символическую ссылку, чтобы Hermes обнаружил плагин:
-
-    ln -s $(python -c "import routerai; import os; print(os.path.dirname(routerai.__file__))") ~/.hermes/plugins/model-providers/routerai
+    curl -fsSL https://raw.githubusercontent.com/temga/hermes-ru-ecosystem/main/install.sh | bash
 
 ## Настройка
 
