@@ -6,9 +6,16 @@
 
 ## Установка
 
-    hermes plugins install temga/hermes-routerai-plugin --enable
+### Standalone
 
-Или через [hermes-ru-ecosystem](https://github.com/temga/hermes-ru-ecosystem):
+`hermes plugins install` клонирует репозиторий плоско в `~/.hermes/plugins/routerai-provider/`, но Provider Registry сканирует только `~/.hermes/plugins/model-providers/<name>/`. Без симлинка провайдер не появится в `hermes model`:
+
+    hermes plugins install temga/hermes-routerai-plugin --enable
+    ln -s ~/.hermes/plugins/routerai-provider ~/.hermes/plugins/model-providers/routerai
+
+### Через hermes-ru-ecosystem
+
+Если у вас несколько плагинов российской экосистемы, `install.sh` создаст симлинк автоматически:
 
     curl -fsSL https://raw.githubusercontent.com/temga/hermes-ru-ecosystem/main/install.sh | bash
 
